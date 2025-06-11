@@ -1,0 +1,13 @@
+
+ {% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>{{title }}</h1>
+        <p>Nous sommes ravis de vous accueillir.</p>
+        <p>Explorez les fonctionnalités disponibles dans {{content}}</p>
+        <p><a href="{{ path('blog') }}">Aller à la page d'accueil</a></p>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Degustez de bon jus de fruits
+{% endblock %}
+
+
+{% block body %}
+	<article>
+		<h2>{{ article.title }}</h2>
+		<div class="metadata">
+			ecrit le {{ article.createdAt|date('d/m/Y') }} à {{ article.createdAt|date('H:i') }} dans la categories jus de fruits</div>
+		<div class="content">
+			<img src="{{ article.image }}" alt="{{ article.title }}" class="img-fluid">
+
+		
+		<div>
+
+			<h3>Commentaires</h3>
+			<ul>
+				<li>Super article ! J'adore le jus de citron.</li>
+				<li>Merci pour la recette, je vais essayer ça ce week-end.</li>
+				<li>Le jus de citron est vraiment rafraîchissant, surtout en été !</li>
+			</ul>
+
+		</div>
+
+		<hr>
+		<footer>
+			<p>Publié le {{ article.createdAt|date('d/m/Y') }} à {{ article.createdAt|date('H:i') }} dans la catégorie jus de fruits</p>
+		</footer>
+	</article>
+{% endblock %}
