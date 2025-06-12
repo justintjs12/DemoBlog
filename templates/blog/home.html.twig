@@ -1,13 +1,21 @@
-
- {% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block body %}
 
-    <div class="container">
-        <h1>{{title }}</h1>
-        <p>Nous sommes ravis de vous accueillir.</p>
-        <p>Explorez les fonctionnalités disponibles dans {{content}}</p>
-        <p><a href="{{ path('blog') }}">Aller à la page d'accueil</a></p>
-    </div>
+	<div
+		class="container">
+
+		<h1>{{ title }}</h1>
+
+		<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Bienvenue sur le blog" style="max-width: 100%; height: auto; margin-top: 20px;">
+		<p>
+			Nous sommes ravis de vous accueillir sur notre plateforme dédiée au partage de connaissances et d’expériences. Ici, vous trouverez des articles variés, des conseils pratiques et des actualités pour enrichir votre quotidien. N’hésitez pas à parcourir nos différentes rubriques et à laisser vos commentaires pour partager votre avis.
+		</p>
+
+		<p>
+			Notre équipe s’engage à vous proposer du contenu de qualité, rédigé avec passion et expertise. Que vous soyez un lecteur fidèle ou un nouveau visiteur, nous espérons que vous trouverez ici l’inspiration et les réponses à vos questions. Bonne lecture et bienvenue dans notre communauté !
+		</p>
+
+	</div>
 
 {% endblock %}
