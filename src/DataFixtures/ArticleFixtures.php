@@ -9,7 +9,7 @@ class ArticleFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-       for ($i = 1; $i <= 50; $i++) {
+       for ($i = 1; $i <= 20; $i++) {
             $article = new MyArticles();
             $article->setTitle("titre de l'article" . $i);
             $article->setContent('Content of article ' . $i);

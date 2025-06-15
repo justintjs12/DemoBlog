@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
-
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 final class BlogController extends AbstractController
 {
@@ -41,8 +41,9 @@ final class BlogController extends AbstractController
         $article = new MyArticles();
         $formArticles = $this->createFormBuilder($article)
             ->add('title', TextType::class, ['label' => 'Titre'])
-            ->add('content', TextareaType::class, ['label' => 'Contenu'])
             ->add('image', TextType::class, ['label' => 'Image'])
+            ->add('content', TextareaType::class, ['label' => 'Contenu'])
+            
             ->getForm();
 
         $formArticles->handleRequest($request);
